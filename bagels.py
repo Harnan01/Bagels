@@ -20,3 +20,39 @@ def main():
     Bagels           No digits is correct.
     
     For example, if the secret number was 248 and your guess was 843, the clues would be fermi pico.""")
+    
+    while True:  #Main game loop.
+        #This stors the secret number the player needs to guess:
+        secretNum = getSecretNum()
+        print('I have tought up a number.')
+        print(f"You have {MAX_GUESSES} guesses to get it.")
+        
+        numGuesses = 1
+        while numGuesses <= MAX_GUESSES:
+            guess = ''
+            #Keep looping until they enter a valid guess:
+            while len(guess) != NUM_DIGITS or not guess.isdecimal():
+                print(f'Guess #{numGuessses}:')
+                guess  = input('> ')
+            
+            
+            clues = getClues(guess, secretNum)
+            print(clues)
+            numGuesses += 1
+            
+            if guess == secretNum:
+                break  # They're correct, so break out of this loop.
+            if numGuess > MAX_GUESSES:
+                print('You ran out of guesses.')
+                print(f'The answer was {secretNum}.')
+                
+        
+        #Ask player if  they want to play again.
+        print('Do you want to play again? (Yes or No)')
+        if not input('> ').lower().startswith('y'):
+            brreak
+        
+    print('Thanks for playing!')
+    
+
+        
