@@ -32,7 +32,7 @@ def main():
             guess = ''
             #Keep looping until they enter a valid guess:
             while len(guess) != NUM_DIGITS or not guess.isdecimal():
-                print(f'Guess #{numGuessses}:')
+                print(f'Guess #{numGuesses}:')
                 guess  = input('> ')
             
             
@@ -42,7 +42,7 @@ def main():
             
             if guess == secretNum:
                 break  # They're correct, so break out of this loop.
-            if numGuess > MAX_GUESSES:
+            if numGuesses > MAX_GUESSES:
                 print('You ran out of guesses.')
                 print(f'The answer was {secretNum}.')
                 
@@ -50,7 +50,7 @@ def main():
         #Ask player if  they want to play again.
         print('Do you want to play again? (Yes or No)')
         if not input('> ').lower().startswith('y'):
-            brreak
+            break
         
     print('Thanks for playing!')
     
