@@ -10,35 +10,18 @@ has no correct digits. You have 10 tries to guess the
 secret number
 
 
-The Program in Action
-
-When you run bagels.py, the output will look like this:
-Bagels, a deductive logic game.
-By Al Sweigart al@inventwithpython.com
-I am thinking of a 3-digit number. Try to guess what it is.
-Here are some clues:
-When I say: That means:
-Pico One digit is correct but in the wrong position.
-Fermi One digit is correct and in the right position.
-Bagels No digit is correct.
-I have thought up a number.
-You have 10 guesses to get it.
-Guess #1:
-> 123
-Pico
-Guess #2:
-> 456
-Bagels
-Guess #3:
-> 178
-Pico Pico
---snip--
-Guess #7:
-> 791
-Fermi Fermi
-Guess #8:
-> 701
-You got it!
-Do you want to play again? (yes or no)
-> no
-Thanks for playing!
+Try to find the answers to the following questions. Experiment with some
+modifications to the code and rerun the program to see what effect the
+changes have.
+1. What happens when you change the NUM_DIGITS constant?Bagels 5
+2. What happens when you change the MAX_GUESSES constant?
+3. What happens if you set NUM_DIGITS to a number larger than 10?
+4. What happens if you replace secretNum = getSecretNum() on line 30 with
+secretNum = '123'?
+5. What error message do you get if you delete or comment out numGuesses
+= 1 on line 34?
+6. What happens if you delete or comment out random.shuffle(numbers) on
+line 62?
+7. What happens if you delete or comment out if guess == secretNum: on
+line 74 and return 'You got it!' on line 75?
+8. What happens if you comment out numGuesses += 1 on line 44?
