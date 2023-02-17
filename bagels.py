@@ -53,6 +53,21 @@ def main():
             break
         
     print('Thanks for playing!')
-    
+
+
+def getSecretNum():
+    """Returns a strng madde up of NUM_DIGITS unique random digits."""
+    numbers = list('0123456789')  #Craete a list of digits 0 to 9.
+    random.shuffle(numbers) #Shuffle them into a random order.
+
+    #Get the first NUM_DIGITS digits in the list for in the list for the secret number:
+
+    secretNum = ''
+    for i in range(NUM_DIGITS):
+        secretNum += str(numbers[i])
+    return secretNum
+
+
+
 
         
