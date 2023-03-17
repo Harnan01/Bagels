@@ -1,7 +1,4 @@
-"""Bagels, by AI Sweigart ai@inventwithpython.com
-A deductive logic game where you must guess a number based on clues.
-View this code at https://nostarch.com/big-book-small-python-projects
-"""
+#Author : Harnan
 
 import random
 
